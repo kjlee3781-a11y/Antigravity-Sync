@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KOSPI 지표 사전 | 경제·시장 관제 시스템</title>
+  
+  <style>
+    :root{
+      --bg:#0B0F16; --panel:#14233A; --panel2:#1B3153; --line:rgba(159,176,204,.18);
+      --txt:#E8EEF8; --mut:#AFC0D9; --mint:#A7FFF1; --gold:#FFE6A0; --accent:#7DB4FF;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#071120,#0B1526 32%,#0D182B 100%);color:var(--txt);font-family:Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif}
+    a{color:#A9D7FF}
+    .wrap{max-width:1120px;margin:0 auto;padding:22px 18px 60px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .crumb{font-size:.76rem;color:var(--mut)}
+    .backlinks{display:flex;gap:8px;flex-wrap:wrap}
+    .chiplink{text-decoration:none;border:1px solid var(--line);color:#DBE8FB;background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:800}
+    .hero{background:linear-gradient(180deg,rgba(53,89,147,.92),rgba(29,54,92,.94));border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;box-shadow:0 14px 40px rgba(0,0,0,.18)}
+    .kicker{color:var(--gold);font-size:.74rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+    h1{margin:8px 0 10px;font-size:2rem}
+    .sub{color:#CFDBEC;line-height:1.7;font-size:.95rem}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{padding:5px 9px;border-radius:999px;border:1px solid var(--line);font-size:.68rem;font-weight:800;color:#D6E5FA;background:rgba(255,255,255,.03)}
+    .tag.warn{border-color:rgba(244,201,93,.35);color:#FFE6A0;background:rgba(244,201,93,.05)}
+    .tag.neg{border-color:rgba(231,111,81,.40);color:#FFD2C8;background:rgba(231,111,81,.05)}
+    .tag.pos{border-color:rgba(45,212,191,.36);color:#CFFFF8;background:rgba(45,212,191,.05)}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:18px}
+    .card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(48,75,125,.86),rgba(27,48,81,.86));padding:16px}
+    .card h2{margin:0 0 10px;font-size:1.02rem}
+    .rows{display:grid;gap:10px}
+    .row{display:grid;grid-template-columns:110px 1fr;gap:10px;padding-top:10px;border-top:1px solid rgba(159,176,204,.12)}
+    .row:first-child{padding-top:0;border-top:0}
+    .key{color:var(--mint);font-size:.72rem;font-weight:850}
+    .val{color:#E2EAF6;line-height:1.7;font-size:.84rem}
+    .logic{margin-top:10px;padding:12px;border-radius:12px;border:1px solid rgba(244,201,93,.16);background:rgba(0,0,0,.12)}
+    .logic .ltitle{color:var(--gold);font-size:.72rem;font-weight:900;margin-bottom:6px}
+    .logic pre{margin:0;white-space:pre-wrap;font-family:inherit;line-height:1.7;font-size:.82rem;color:#DEE7F4}
+    .list{margin:8px 0 0 18px;padding:0;color:#DDE7F5;line-height:1.7;font-size:.84rem}
+    .source-list{display:flex;flex-wrap:wrap;gap:8px}
+    .source{display:inline-flex;gap:6px;align-items:center;text-decoration:none;color:#DCE9FD;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 9px;border-radius:10px;font-size:.72rem;font-weight:750}
+    .aside-note{font-size:.8rem;color:#D5E0F0;line-height:1.7}
+    .aside-note strong{color:#FFF}
+    .small{font-size:.72rem;color:var(--mut);line-height:1.65}
+    .toc{display:grid;gap:8px}
+    .toc a{text-decoration:none;color:#CFE2FF;border:1px solid rgba(159,176,204,.15);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.025);font-size:.76rem}
+    .footer-nav{margin-top:22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="crumb">경제·시장 관제 시스템 / 상세 지식 페이지</div>
+      <div class="backlinks">
+        <a class="chiplink" href="../index.html">← 관제 메인으로</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="kicker">Dictionary Detail</div>
+      <h1>KOSPI 지표 사전</h1>
+      <div class="sub">KOSPI는 한국 유가증권시장의 대표 종합주가지수입니다. 다만 단순한 ‘한국경제 체온계’로 읽기보다, 대형 상장주 중심의 이익 기대·할인율·외국인 수급·글로벌 위험선호가 결합된 결과지표로 읽는 편이 안전합니다.</div>
+      <div class="meta"><span class="tag ">한국 대표지수</span><span class="tag pos">결과지표</span><span class="tag warn">대형주 편중 주의</span></div>
+    </header>
+
+    <div class="grid">
+      <main class="rows">
+        
+        <section id="sec1" class="card">
+          <h2>정의와 구조</h2>
+          <div class="rows"><div class="row"><div class="key">무엇인가</div><div class="val">KRX는 KOSPI를 유가증권시장의 종합주가지수로 설명합니다. <b>1980-01-04를 100</b>으로 둔 시가총액식 지수입니다.</div></div><div class="row"><div class="key">핵심구조</div><div class="val">시가총액 가중이므로 삼성전자·SK하이닉스 등 대형주의 영향이 큽니다. 따라서 ‘지수 상승’과 ‘시장 전체 건강’은 완전히 같은 말이 아닙니다.</div></div><div class="row"><div class="key">왜 보나</div><div class="val">한국 대형 상장기업의 <b>이익 기대</b>, 글로벌 자금흐름, 원화 방향, 금리·달러 환경이 한 곳에 집약되기 때문입니다.</div></div></div>
+        </section>
+        <section id="sec2" class="card">
+          <h2>해석</h2>
+          <div class="rows"><div class="row"><div class="key">상승</div><div class="val">기업이익 기대 개선, 할인율 하락, 외국인 순매수, 반도체 등 주도 업종 재평가가 원인일 수 있습니다.</div></div><div class="row"><div class="key">하락</div><div class="val">이익추정치 하향, DXY/US10Y 상승, 위험회피, 원화 약세, 대형주 조정 등이 원인일 수 있습니다.</div></div><div class="row"><div class="key">시차</div><div class="val">주가는 미래를 선반영하므로 실물지표보다 먼저 움직일 수 있지만, 고정된 선행 개월 수를 가정하는 것은 피합니다.</div></div></div>
+        </section>
+        <section id="sec3" class="card">
+          <h2>오독 위험</h2>
+          <div class="rows"><div class="row"><div class="key">대표 오류</div><div class="val">KOSPI 강세를 한국 내수경제 전체 강세와 동일시하는 오류.</div></div><div class="row"><div class="key">주의점</div><div class="val">대형 기술주 강세만으로 KOSPI가 강할 수 있으며, 이 경우 중소형·내수주의 체감경기와 괴리가 커집니다.</div></div></div>
+        </section>
+        <section id="sec4" class="card">
+          <h2>같이 볼 지표</h2>
+          <div class="rows"><div class="row"><div class="key">필수</div><div class="val">DXY · USD/KRW · US10Y · VIX · 외국인 순매수 · 반도체 수출 · 일평균 수출</div></div><div class="row"><div class="key">관계카드</div><div class="val"><a href='../relations/dxy-kospi.html'>DXY ↔ KOSPI</a> · <a href='../relations/us10y-kospi.html'>US10Y ↔ KOSPI</a> · <a href='../relations/export-kospi.html'>일평균 수출 ↔ KOSPI</a></div></div></div>
+        </section>
+        <section class="card">
+          <h2>핵심 전달경로 / 사고틀</h2>
+          <div class="logic">
+            <div class="ltitle">관제 질문</div>
+            <pre>KOSPI가 오른다
+→ 이익 기대가 좋아서인가?
+→ 달러/금리가 내려서인가?
+→ 반도체 등 소수 대형주 때문인가?
+→ 외국인 수급도 같은 방향인가?
+
+KOSPI가 내린다
+→ 이익 하향 때문인가?
+→ DXY·US10Y 상승 때문인가?
+→ 위험회피/VIX 때문인가?</pre>
+          </div>
+        </section>
+        <section class="card">
+          <h2>원문 자료</h2>
+          <div class="source-list"><a class="source" href="https://open.krx.co.kr/contents/OPN/01/01010101/OPN01010101.jsp" target="_blank" rel="noopener">KRX KOSPI 정의 ↗</a><a class="source" href="https://data.krx.co.kr/" target="_blank" rel="noopener">KRX 데이터 ↗</a></div>
+        </section>
+      </main>
+      <aside class="rows">
+        <section class="card">
+          <h2>목차</h2>
+          <div class="toc"><a href="#sec1">정의와 구조</a><a href="#sec2">왜 중요한가</a><a href="#sec3">해석법</a><a href="#sec4">오독 위험</a><a href="#sec5">같이 볼 지표</a></div>
+        </section>
+        <section class="card"><h2>핵심 한 줄</h2><div class="aside-note">KOSPI는 한국 증시의 <strong>결과지표</strong>입니다. 방향보다 원인 분해가 먼저입니다.</div></section><section class="card"><h2>마지막 검토</h2><div class="aside-note">2026-09-08</div></section>
+      </aside>
+    </div>
+
+    <div class="footer-nav">
+      <a class="chiplink" href="../index.html#dictionary">메인의 지표 사전 요약으로</a>
+      <a class="chiplink" href="../index.html#relations">메인의 관계 카드 요약으로</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>관계 카드 · 일평균 수출 ↔ KOSPI | 경제·시장 관제 시스템</title>
+  
+  <style>
+    :root{
+      --bg:#0B0F16; --panel:#14233A; --panel2:#1B3153; --line:rgba(159,176,204,.18);
+      --txt:#E8EEF8; --mut:#AFC0D9; --mint:#A7FFF1; --gold:#FFE6A0; --accent:#7DB4FF;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#071120,#0B1526 32%,#0D182B 100%);color:var(--txt);font-family:Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif}
+    a{color:#A9D7FF}
+    .wrap{max-width:1120px;margin:0 auto;padding:22px 18px 60px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .crumb{font-size:.76rem;color:var(--mut)}
+    .backlinks{display:flex;gap:8px;flex-wrap:wrap}
+    .chiplink{text-decoration:none;border:1px solid var(--line);color:#DBE8FB;background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:800}
+    .hero{background:linear-gradient(180deg,rgba(53,89,147,.92),rgba(29,54,92,.94));border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;box-shadow:0 14px 40px rgba(0,0,0,.18)}
+    .kicker{color:var(--gold);font-size:.74rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+    h1{margin:8px 0 10px;font-size:2rem}
+    .sub{color:#CFDBEC;line-height:1.7;font-size:.95rem}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{padding:5px 9px;border-radius:999px;border:1px solid var(--line);font-size:.68rem;font-weight:800;color:#D6E5FA;background:rgba(255,255,255,.03)}
+    .tag.warn{border-color:rgba(244,201,93,.35);color:#FFE6A0;background:rgba(244,201,93,.05)}
+    .tag.neg{border-color:rgba(231,111,81,.40);color:#FFD2C8;background:rgba(231,111,81,.05)}
+    .tag.pos{border-color:rgba(45,212,191,.36);color:#CFFFF8;background:rgba(45,212,191,.05)}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:18px}
+    .card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(48,75,125,.86),rgba(27,48,81,.86));padding:16px}
+    .card h2{margin:0 0 10px;font-size:1.02rem}
+    .rows{display:grid;gap:10px}
+    .row{display:grid;grid-template-columns:110px 1fr;gap:10px;padding-top:10px;border-top:1px solid rgba(159,176,204,.12)}
+    .row:first-child{padding-top:0;border-top:0}
+    .key{color:var(--mint);font-size:.72rem;font-weight:850}
+    .val{color:#E2EAF6;line-height:1.7;font-size:.84rem}
+    .logic{margin-top:10px;padding:12px;border-radius:12px;border:1px solid rgba(244,201,93,.16);background:rgba(0,0,0,.12)}
+    .logic .ltitle{color:var(--gold);font-size:.72rem;font-weight:900;margin-bottom:6px}
+    .logic pre{margin:0;white-space:pre-wrap;font-family:inherit;line-height:1.7;font-size:.82rem;color:#DEE7F4}
+    .list{margin:8px 0 0 18px;padding:0;color:#DDE7F5;line-height:1.7;font-size:.84rem}
+    .source-list{display:flex;flex-wrap:wrap;gap:8px}
+    .source{display:inline-flex;gap:6px;align-items:center;text-decoration:none;color:#DCE9FD;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 9px;border-radius:10px;font-size:.72rem;font-weight:750}
+    .aside-note{font-size:.8rem;color:#D5E0F0;line-height:1.7}
+    .aside-note strong{color:#FFF}
+    .small{font-size:.72rem;color:var(--mut);line-height:1.65}
+    .toc{display:grid;gap:8px}
+    .toc a{text-decoration:none;color:#CFE2FF;border:1px solid rgba(159,176,204,.15);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.025);font-size:.76rem}
+    .footer-nav{margin-top:22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="crumb">경제·시장 관제 시스템 / 상세 지식 페이지</div>
+      <div class="backlinks">
+        <a class="chiplink" href="../index.html">← 관제 메인으로</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="kicker">Relation Detail</div>
+      <h1>관계 카드 · 일평균 수출 ↔ KOSPI</h1>
+      <div class="sub">한국 증시에서 수출은 매우 중요하지만, 총수출과 지수의 움직임을 곧바로 일대일로 연결하면 오류가 생깁니다. 조업일수, 반도체 편중, 가격효과, KOSPI의 선반영 가능성을 함께 봐야 합니다.</div>
+      <div class="meta"><span class="tag pos">경기순환상 +</span><span class="tag warn">선행성 검증 필요</span><span class="tag ">D-01 PENDING</span></div>
+    </header>
+
+    <div class="grid">
+      <main class="rows">
+        
+        <section id="sec1" class="card">
+          <h2>기본 가설</h2>
+          <div class="rows"><div class="row"><div class="key">요약</div><div class="val">한국은 수출 대형주 비중이 높아 수출 사이클 개선이 상장기업 이익과 연결되기 쉽습니다. 따라서 경기순환 관점에서는 <b>양(+)의 관계</b>가 기대됩니다.</div></div></div>
+        </section>
+        <section id="sec2" class="card">
+          <h2>왜 일평균인가</h2>
+          <div class="rows"><div class="row"><div class="key">의미</div><div class="val">월 총수출은 조업일수 영향을 크게 받습니다. 산업통상부도 월간 수출입 동향에서 <b>일평균 수출</b>을 별도로 제시합니다.</div></div><div class="row"><div class="key">효과</div><div class="val">일평균으로 보면 단순 조업일수 착시를 일부 줄일 수 있습니다.</div></div></div>
+        </section>
+        <section id="sec3" class="card">
+          <h2>구조변화</h2>
+          <div class="rows"><div class="row"><div class="key">품목구성</div><div class="val">반도체 비중이 급증한 국면에는 총수출이 좋아도 비IT 업종·내수는 약할 수 있습니다.</div></div><div class="row"><div class="key">선반영</div><div class="val">KOSPI는 미래 이익을 선반영할 수 있으므로 실제 수출보다 먼저 움직일 가능성이 있습니다.</div></div></div>
+        </section>
+        <section id="sec4" class="card">
+          <h2>반증 조건</h2>
+          <div class="rows"><div class="row"><div class="key">어떤 경우</div><div class="val">일평균 수출이 개선되는데도 이익추정치가 하향되거나, 개선이 특정 품목·가격효과에만 집중되고 KOSPI breadth가 약하면 단순 수출호조 해석을 낮춰야 합니다.</div></div></div>
+        </section>
+        <section id="sec5" class="card">
+          <h2>권장 분석</h2>
+          <div class="rows"><div class="row"><div class="key">방법</div><div class="val"><b>YoY↔YoY</b>, lead-lag, rolling correlation, 반도체 제외 수출 비교가 적절합니다.</div></div><div class="row"><div class="key">상태</div><div class="val">사이트 내부 시계열은 아직 없고(D-01 PENDING), Lab에서 공식자료 수집 후 검증 예정입니다.</div></div></div>
+        </section>
+        <section class="card">
+          <h2>핵심 전달경로 / 사고틀</h2>
+          <div class="logic">
+            <div class="ltitle">전달경로</div>
+            <pre>글로벌 수요 ↑
+→ 한국 일평균 수출 ↑
+→ 수출기업 매출/이익 기대 ↑
+→ KOSPI 대형 수출주 재평가
+
+하지만
+→ 반도체 단일 품목 효과 / 가격효과 / 내수 괴리
+→ 지수 전체로 확산되지 않을 수 있음</pre>
+          </div>
+        </section>
+        <section class="card">
+          <h2>원문 자료</h2>
+          <div class="source-list"><a class="source" href="https://admin2.korea.kr/briefing/pressReleaseView.do?newsId=156776348" target="_blank" rel="noopener">산업통상부 수출입동향 ↗</a><a class="source" href="https://www.bok.or.kr/portal/bbs/B0000156/view.do?menuNo=200067&nttId=10096935" target="_blank" rel="noopener">한국은행 수출 관련 보고 ↗</a><a class="source" href="https://eiec.kdi.re.kr/publish/naraView.do?cidx=15491" target="_blank" rel="noopener">KDI 수출·내수 괴리 ↗</a></div>
+        </section>
+      </main>
+      <aside class="rows">
+        <section class="card">
+          <h2>목차</h2>
+          <div class="toc"><a href="#sec1">기본 가설</a><a href="#sec2">왜 일평균인가</a><a href="#sec3">구조변화</a><a href="#sec4">반증 조건</a><a href="#sec5">권장 분석</a></div>
+        </section>
+        <section class="card"><h2>오해 방지</h2><div class="aside-note">총수출 증가가 곧바로 <strong>모든 업종 호조</strong>를 뜻하지는 않습니다.</div></section><section class="card"><h2>다음 Lab</h2><div class="aside-note">월 YoY · lead-lag · 반도체 제외 비교 · breadth와 동행 점검</div></section>
+      </aside>
+    </div>
+
+    <div class="footer-nav">
+      <a class="chiplink" href="../index.html#dictionary">메인의 지표 사전 요약으로</a>
+      <a class="chiplink" href="../index.html#relations">메인의 관계 카드 요약으로</a>
+    </div>
+  </div>
+</body>
+</html>

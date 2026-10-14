@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>US10Y 지표 사전 | 경제·시장 관제 시스템</title>
+  
+  <style>
+    :root{
+      --bg:#0B0F16; --panel:#14233A; --panel2:#1B3153; --line:rgba(159,176,204,.18);
+      --txt:#E8EEF8; --mut:#AFC0D9; --mint:#A7FFF1; --gold:#FFE6A0; --accent:#7DB4FF;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#071120,#0B1526 32%,#0D182B 100%);color:var(--txt);font-family:Segoe UI,Apple SD Gothic Neo,Malgun Gothic,sans-serif}
+    a{color:#A9D7FF}
+    .wrap{max-width:1120px;margin:0 auto;padding:22px 18px 60px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .crumb{font-size:.76rem;color:var(--mut)}
+    .backlinks{display:flex;gap:8px;flex-wrap:wrap}
+    .chiplink{text-decoration:none;border:1px solid var(--line);color:#DBE8FB;background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:800}
+    .hero{background:linear-gradient(180deg,rgba(53,89,147,.92),rgba(29,54,92,.94));border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;box-shadow:0 14px 40px rgba(0,0,0,.18)}
+    .kicker{color:var(--gold);font-size:.74rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+    h1{margin:8px 0 10px;font-size:2rem}
+    .sub{color:#CFDBEC;line-height:1.7;font-size:.95rem}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{padding:5px 9px;border-radius:999px;border:1px solid var(--line);font-size:.68rem;font-weight:800;color:#D6E5FA;background:rgba(255,255,255,.03)}
+    .tag.warn{border-color:rgba(244,201,93,.35);color:#FFE6A0;background:rgba(244,201,93,.05)}
+    .tag.neg{border-color:rgba(231,111,81,.40);color:#FFD2C8;background:rgba(231,111,81,.05)}
+    .tag.pos{border-color:rgba(45,212,191,.36);color:#CFFFF8;background:rgba(45,212,191,.05)}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:18px}
+    .card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(48,75,125,.86),rgba(27,48,81,.86));padding:16px}
+    .card h2{margin:0 0 10px;font-size:1.02rem}
+    .rows{display:grid;gap:10px}
+    .row{display:grid;grid-template-columns:110px 1fr;gap:10px;padding-top:10px;border-top:1px solid rgba(159,176,204,.12)}
+    .row:first-child{padding-top:0;border-top:0}
+    .key{color:var(--mint);font-size:.72rem;font-weight:850}
+    .val{color:#E2EAF6;line-height:1.7;font-size:.84rem}
+    .logic{margin-top:10px;padding:12px;border-radius:12px;border:1px solid rgba(244,201,93,.16);background:rgba(0,0,0,.12)}
+    .logic .ltitle{color:var(--gold);font-size:.72rem;font-weight:900;margin-bottom:6px}
+    .logic pre{margin:0;white-space:pre-wrap;font-family:inherit;line-height:1.7;font-size:.82rem;color:#DEE7F4}
+    .list{margin:8px 0 0 18px;padding:0;color:#DDE7F5;line-height:1.7;font-size:.84rem}
+    .source-list{display:flex;flex-wrap:wrap;gap:8px}
+    .source{display:inline-flex;gap:6px;align-items:center;text-decoration:none;color:#DCE9FD;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 9px;border-radius:10px;font-size:.72rem;font-weight:750}
+    .aside-note{font-size:.8rem;color:#D5E0F0;line-height:1.7}
+    .aside-note strong{color:#FFF}
+    .small{font-size:.72rem;color:var(--mut);line-height:1.65}
+    .toc{display:grid;gap:8px}
+    .toc a{text-decoration:none;color:#CFE2FF;border:1px solid rgba(159,176,204,.15);border-radius:10px;padding:8px 10px;background:rgba(255,255,255,.025);font-size:.76rem}
+    .footer-nav{margin-top:22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="crumb">경제·시장 관제 시스템 / 상세 지식 페이지</div>
+      <div class="backlinks">
+        <a class="chiplink" href="../index.html">← 관제 메인으로</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="kicker">Dictionary Detail</div>
+      <h1>US10Y 지표 사전</h1>
+      <div class="sub">US10Y는 글로벌 할인율과 장기 금융여건의 핵심 금리입니다. 다만 금리 상승이 ‘좋은 성장뉴스’인지, ‘긴축/실질금리 충격’인지, ‘term premium 상승’인지를 구분해야 합니다.</div>
+      <div class="meta"><span class="tag warn">원인 분해 필수</span><span class="tag ">글로벌 할인율</span><span class="tag neg">긴축형 상승 주의</span></div>
+    </header>
+
+    <div class="grid">
+      <main class="rows">
+        
+        <section id="sec1" class="card">
+          <h2>정의</h2>
+          <div class="rows"><div class="row"><div class="key">무엇인가</div><div class="val">FRED의 DGS10은 Federal Reserve H.15의 <b>10-Year Constant Maturity Treasury</b> 시장수익률입니다.</div></div><div class="row"><div class="key">단위/빈도</div><div class="val">% · Daily</div></div><div class="row"><div class="key">핵심</div><div class="val">미국 장기국채는 글로벌 자산가격의 핵심 기준축이므로, 이 금리의 변화는 주식·환율·크레딧에 넓게 파급됩니다.</div></div></div>
+        </section>
+        <section id="sec2" class="card">
+          <h2>왜 중요한가</h2>
+          <div class="rows"><div class="row"><div class="key">할인율</div><div class="val">장기금리는 주식 밸류에이션의 할인율에 직접 연결됩니다.</div></div><div class="row"><div class="key">금융여건</div><div class="val">기업 장기차입 비용, 달러 방향, EM 자금흐름, 위험자산 선호에 영향을 줄 수 있습니다.</div></div></div>
+        </section>
+        <section id="sec3" class="card">
+          <h2>해석</h2>
+          <div class="rows"><div class="row"><div class="key">상승</div><div class="val">성장 기대 개선, 인플레이션 기대, Fed 경로 재평가, 재정/term premium 상승이 모두 가능 원인입니다.</div></div><div class="row"><div class="key">하락</div><div class="val">완화 기대, 경기둔화 우려, 안전자산 선호 확대 등이 원인일 수 있습니다.</div></div><div class="row"><div class="key">요점</div><div class="val">같은 10bp 상승도 <b>원인</b>에 따라 주식시장 의미가 달라집니다.</div></div></div>
+        </section>
+        <section id="sec4" class="card">
+          <h2>오독 위험</h2>
+          <div class="rows"><div class="row"><div class="key">대표 오류</div><div class="val">US10Y 상승 = 주식 악재 로 기계적으로 해석하는 오류.</div></div><div class="row"><div class="key">주의점</div><div class="val">미국 성장 개선 때문에 오르는 금리라면 경기민감주·실적민감주는 오히려 버틸 수 있습니다.</div></div></div>
+        </section>
+        <section id="sec5" class="card">
+          <h2>같이 볼 지표</h2>
+          <div class="rows"><div class="row"><div class="key">필수</div><div class="val">US2Y · T10Y2Y · DFII10(실질금리) · DXY · VIX · High Yield Spread</div></div><div class="row"><div class="key">관계카드</div><div class="val"><a href='../relations/us10y-kospi.html'>US10Y ↔ KOSPI</a></div></div></div>
+        </section>
+        <section class="card">
+          <h2>핵심 전달경로 / 사고틀</h2>
+          <div class="logic">
+            <div class="ltitle">관제 질문</div>
+            <pre>US10Y 상승
+→ US2Y도 오르는가? (Fed 경로)
+→ 실질금리도 오르는가? (할인율)
+→ DXY도 오르는가? (EM 긴축)
+→ VIX/HY Spread도 오르는가? (위험회피)
+→ 아니면 성장 기대만 좋아진 것인가?</pre>
+          </div>
+        </section>
+        <section class="card">
+          <h2>원문 자료</h2>
+          <div class="source-list"><a class="source" href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">FRED DGS10 ↗</a><a class="source" href="https://www.federalreserve.gov/econres/notes/feds-notes/why-have-far-forward-nominal-treasury-rates-increased-so-much-in-the-past-few-years-20260212.html" target="_blank" rel="noopener">Fed 장기금리 해석 ↗</a><a class="source" href="https://www.imf.org/en/blogs/articles/2021/04/05/how-rising-interest-rates-could-affect-emerging-markets" target="_blank" rel="noopener">IMF Rising Rates ↗</a></div>
+        </section>
+      </main>
+      <aside class="rows">
+        <section class="card">
+          <h2>목차</h2>
+          <div class="toc"><a href="#sec1">정의</a><a href="#sec2">왜 중요한가</a><a href="#sec3">상승/하락 해석</a><a href="#sec4">오독 위험</a><a href="#sec5">같이 볼 지표</a></div>
+        </section>
+        <section class="card"><h2>핵심 한 줄</h2><div class="aside-note">US10Y는 방향보다 <strong>상승/하락의 원인 분해</strong>가 더 중요합니다.</div></section><section class="card"><h2>마지막 검토</h2><div class="aside-note">2026-09-08</div></section>
+      </aside>
+    </div>
+
+    <div class="footer-nav">
+      <a class="chiplink" href="../index.html#dictionary">메인의 지표 사전 요약으로</a>
+      <a class="chiplink" href="../index.html#relations">메인의 관계 카드 요약으로</a>
+    </div>
+  </div>
+</body>
+</html>

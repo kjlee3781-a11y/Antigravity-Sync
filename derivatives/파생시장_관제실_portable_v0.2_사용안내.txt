@@ -1,0 +1,6 @@
+파생시장 관제실 Portable v0.2
+- 장마감 Final Review 중심, 필요 시 장중 Quick Check
+- Python/Node/DB/서버 없이 최신 브라우저에서 실행
+- 원자료 CSV/TXT/표 붙여넣기 → 확인 → 규칙 판독
+- 최근 20거래일 유지, 중요일은 사용자 승인 후 보관
+- JSON 백업/복원으로 새 PC 이전
