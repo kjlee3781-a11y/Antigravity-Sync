@@ -11,3 +11,4 @@
 - 프로그램 1개 = 폴더 1개. 서로의 파일을 섞지 않는다.
 - 각 폴더의 시작 파일 이름은 `index.html`.
 - 맨 위(루트)의 `index.html`은 프로그램 목록 화면이다.
+- 프로그램의 날짜별 기록은 그 프로그램 폴더 안의 `data/` 폴더에 둔다. (예: `economy-dashboard/derivatives/data/records.json`)

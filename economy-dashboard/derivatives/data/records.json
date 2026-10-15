@@ -1,0 +1,22 @@
+{
+  "schema": "derivatives-records-v1",
+  "note": "날짜별 입력값 기록. 판독 결과는 화면이 규칙으로 다시 계산합니다. 값이 없는 항목은 null.",
+  "records": {
+    "2026-10-14": {
+      "date": "2026-10-14",
+      "mode": "final",
+      "metrics": {
+        "cash_foreign_net": -11816.04,
+        "futures_foreign_net": 3557,
+        "program_nonarb_net": -631.3,
+        "program_arb_net": 634.06,
+        "spot": 936.82,
+        "future": 944.2,
+        "oi": 147765,
+        "fx": null
+      },
+      "source": "KRX 5종 CSV (코스피·주식만, 선물 시장구분 전체)",
+      "ruleVersion": "0.2"
+    }
+  }
+}
