@@ -13,7 +13,9 @@
         "spot": 936.82,
         "future": 944.2,
         "oi": 147765,
-        "fx": 1338.3
+        "fx": 1338.3,
+        "theory_basis": 4.12,
+        "gap_rate": 0.35
       },
       "source": "KRX 5종 CSV (코스피·주식만, 선물 시장구분 전체)",
       "ruleVersion": "0.2"
